@@ -24,10 +24,14 @@ h1 {
     text-align: center;
 }
 
-button{
-    margin-bottom: 30% !important;
-    margin-left: 30% !important;
-    margin-top: 20% !important;
+.gamebutton{
+    margin-top: 10%;
+    margin-bottom: 10% !important;
+    margin-left: 40%;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    ;
 }
 
 
