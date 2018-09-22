@@ -5,7 +5,7 @@ var unanswered = 0;
 var serialNumber = 0;
 // no need for a value as it is a object variable
 var intervalId;
-
+// array for questions and answers
 var quesAnsArray = [
   {
     question: " Ant-Man has had a number of incarnations. Which of these was his first?",
@@ -114,18 +114,18 @@ function qaset() {
 
   $(".maincontent").append(
     $(
-      "<h3 class='text-center'>" + quesAnsArray[serialNumber].question + "</h3>"
+      "<h2 class='text-center'>" + quesAnsArray[serialNumber].question + "</h2>"
     )
   );
 
   for (var i = 0; i < 4; i++) {
     $(".maincontent").append(
       $(
-        "<h3 class='answer'>" +
+        "<h2 class='answer'>" +
           option[i] +
           " " +
           quesAnsArray[serialNumber].answers[i] +
-          "</h3>"
+          "</h2>"
       )
     );
   }
@@ -138,7 +138,7 @@ function timeOver() {
   contentBuild();
 
   $(".maincontent").append(
-    $("<h3 class='text-center'> You ran out of time!</h3>")
+    $("<h2 class='text-center'> You ran out of time!</h2>")
   );
   $(".maincontent").append(
     $(
@@ -176,9 +176,9 @@ function showCorrect() {
 
   $(".maincontent").append(
     $(
-      "<h3 class='text-center'>Correct! The answer is: " +
+      "<h2 class='text-center'>Correct! The answer is: " +
         quesAnsArray[serialNumber].correct +
-        "</h3>"
+        "</h2>"
     )
   );
 
@@ -191,9 +191,9 @@ function showIncorrect() {
 
   $(".maincontent").append(
     $(
-      "<h3 class='text-center'>Incorrect! The correct answer is: " +
+      "<h2 class='text-center'>Incorrect! The correct answer is: " +
         quesAnsArray[serialNumber].correct +
-        "</h3>"
+        "</h2>"
     )
   );
 
@@ -214,10 +214,10 @@ function hault() {
 function gameOver() {
   contentBuild();
 
-  $(".maincontent").append($("<h3>Correct Answers: " + correct + "</h3>"));
-  $(".maincontent").append($("<h3>Incorrect Answers: " + incorrect + "</h3>"));
+  $(".maincontent").append($("<h2>Correct Answers: " + correct + "</h2>"));
+  $(".maincontent").append($("<h2>Incorrect Answers: " + incorrect + "</h2>"));
   $(".maincontent").append(
-    $("<h3>Unanswered Answers: " + unanswered + "</h3>")
+    $("<h2>Unanswered Answers: " + unanswered + "</h2>")
   );
   $(".maincontent").append(
     $(

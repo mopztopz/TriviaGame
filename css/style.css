@@ -1,29 +1,46 @@
-
 body {
-    background-image: url(../images/comic-backgroud.jpg) ;
+    background-image: url(../images/comic-backgroud.jpg);
     font-family: 'Bangers', cursive !important;
     font-size: 50px !important;
+}
+
+h1 {
+    text-align: center;
+    font-size: 200% !important;
+    color: #e91c28 !important;
     
 }
 
-h1{
-    text-align: center;
-    
+
+.outline {
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
 }
 
-#start{
+#start {
     text-align: center;
-}
-.maincontent{
-    text-align: center;
-    
 }
 
-.main{
+button{
+    margin-bottom: 30% !important;
+    margin-left: 30% !important;
+    margin-top: 20% !important;
+}
+
+
+
+.maincontent {
+    text-align: center;
+    font-size: 100px !important;
+    color: #e91c28 !important;
+}
+
+.main {
     margin-top: 5%;
-    background: lightblue;
+    background: #f6efc2;
     height: auto;
     border: solid black 8px;
-
-    
 }
