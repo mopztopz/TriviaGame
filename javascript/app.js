@@ -76,9 +76,14 @@ var quesAnsArray = [
 ];
 var option = ["A.","B.","C.","D."];
 
+var audioElement = document.createElement("audio");
+    audioElement.setAttribute("src", "asset/audio/game_start.ogg");
+
 $("#start").on("click", function(event) {
+    
   // hides the start button
   $("#start").hide();
+  audioElement.play();
   //time needs to be called before the set of question appears
   timeStarter();
   //a set of a question and 4 possible answer
@@ -143,9 +148,9 @@ function timeOver() {
   );
   $(".maincontent").append(
     $(
-      "<button> The correct answer is: " +
+      "<h2 class='text-center'> The correct answer is: " +
         quesAnsArray[serialNumber].correct +
-        "</button>"
+        "</h2>"
     )
   );
 
@@ -192,7 +197,7 @@ function showIncorrect() {
 
   $(".maincontent").append(
     $(
-      "<h2 class='text-center'>Incorrect! The correct answer is: " +
+      "<h3 class='text-center'>Incorrect! The correct answer is: " +
         quesAnsArray[serialNumber].correct +
         "</h3>"
     )

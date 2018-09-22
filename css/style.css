@@ -1,5 +1,5 @@
 body {
-    background-image: url(../images/comic-backgroud.jpg);
+    background-image: url(../assest/images/comic-backgroud.jpg);
     font-family: 'Bangers', cursive !important;
     font-size: 50px !important;
 }
@@ -30,15 +30,19 @@ h1 {
     margin-left: 40%;
     padding-left: 10px;
     padding-right: 10px;
+    color: #e91c28;
+    border: black solid 5px;
+    background: #01aced;
     
     ;
 }
 
 
 
+
 .maincontent {
     text-align: center;
-    font-size: 100px !important;
+    
     color: #e91c28 !important;
 }
 
@@ -46,5 +50,12 @@ h1 {
     margin-top: 5%;
     background: #f6efc2;
     height: auto;
-    border: solid black 8px;
+    border: solid #13123b 8px;
+}
+
+footer {
+    background: #f6efc2 !important;
+    border-top: solid #13123b  5px !important;
+    text-align: center;
+    color: #e91c28 !important;
 }
