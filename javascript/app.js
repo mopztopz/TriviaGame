@@ -10,8 +10,8 @@ var quesAnsArray = [
   {
     question: " Ant-Man has had a number of incarnations. Which of these was his first?",
     answers: ["Scott Lang", "Eric O Grady", "Mick Taylor", "Hank Pym"],
-    correct: "Hank Pym"
-    
+    correct: "Hank Pym",
+       
   },
   {
     question:
@@ -76,8 +76,7 @@ var quesAnsArray = [
 ];
 var option = ["A.","B.","C.","D."];
 
-var audioElement = document.createElement("audio");
-    audioElement.setAttribute("src", "asset/audio/game_start.ogg");
+
 
 $("#start").on("click", function(event) {
     
@@ -169,6 +168,7 @@ $("body").on("click", ".answer", function(event) {
   console.log(userAnswer);
 
   if (userAnswer === quesAnsArray[serialNumber].correct) {
+    
     showCorrect();
   } else {
     showIncorrect();
@@ -185,10 +185,12 @@ function showCorrect() {
       "<h3 class='text-center'>Correct! The answer is: " +
         quesAnsArray[serialNumber].correct +
         "</h3>"
+        
+
     )
   );
-
-  setTimeout(hault, 2000);
+  
+   setTimeout(hault, 2000);
 }
 
 function showIncorrect() {
@@ -230,6 +232,10 @@ function gameOver() {
       "<button type='button' class='btn btn-secondary' id='reset'>Start Over?</button>"
     )
   );
+}
+
+function displayimage(){
+  $(".gameimg").append($("<img src = " + quesAnsArray[serialNumber].images +">") );
 }
 
 $("body").on("click", "#reset", function() {
